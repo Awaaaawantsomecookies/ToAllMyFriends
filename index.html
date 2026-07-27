@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To All My Friends</title>
+    <!-- <link rel="stylesheet" href="globals.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="text.css" />
+  </head>
+  <body>
+    <!-- BACKGROUND IMAGES -->
+    <div class="main">
+      <div class="frame-number-1">
+        <div class="first-background"></div>
+        <div class="final-first" id="finalFirstTrigger"></div>
+        <img
+          class="final-second-video"
+          id="finalSecondVideo"
+          src="FINAL-ASSETS/final-second-1.gif"
+          alt="Final second animation"
+        />
+      </div>
+
+      <div class="frame-number-2">
+        <div class="resting"><img id="star-interactive" src="FINAL-ASSETS/star-interactive.png" alt=""></div>
+      </div>
+
+      <div class="frame-number-4">
+        <div class="background-orange"></div>
+        <div class="anger-layer">
+          <div class="anger-frame img-1"></div>
+          <div class="anger-frame img-2"></div>
+        </div>
+
+        <div class="another-figure-2"></div>
+        <div class="another-figure-1"></div>
+      </div>
+
+      <div class="the-end-blend">
+        <div class="blendin-line"></div>
+        <div class="orange-line"></div>
+        <div class="wigling-wigling"></div>
+      </div>
+
+      <div class="element">
+        <img class="element-1" src="FINAL-ASSETS/element.png" />
+      </div>
+      <div class="element-wrapper">
+        <img class="element-2" src="FINAL-ASSETS/element.png" />
+      </div>
+      <div class="img-wrapper">
+        <img class="element-3" src="FINAL-ASSETS/element.png" />
+      </div>
+      <div class="element-4"></div>
+
+      <div class="parent-number-3">
+        <div class="frame-number-3">
+          <div class="line"></div>
+          <div class="first-figure"></div>
+          <div class="second-figure"></div>
+          <div class="third-figure"></div>
+          <div class="tear-dropping"></div>
+          <div class="tear-dropping-2"></div>
+       
+        </div>
+      </div>
+
+      <div class="blendin-line-2"></div>
+      <div class="fragile"></div>
+      <div class="orange-line-2"></div>
+
+      <div class="title"></div>
+
+      <div class="peace-ending"></div>
+
+      <!-- TEXT CONTENT -->
+      <div class="intro-title">
+        <div class="title-2">
+          <div class="to-all-my"><div class="heading">To all my</div></div>
+          <div class="text-wrapper-7">friends</div>
+        </div>
+        <div class="text-wrapper-8">by May Yang (HAUNTIE)</div>
+      </div>
+
+      <div class="text-3">
+        <p class="that-i-could-be-this">
+         That <span class="color-pulse">I could be this human</span> at this time
+        </p>
+        <p class="p">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          breathing, looking, seeing, smelling
+        </p>
+      </div>
+
+      <div class="text-4">
+        <p class="text-wrapper-3">That I could be this moment at this time</p>
+        <div class="text-wrapper-4">resting, calmly moving, feeling</div>
+      </div>
+
+      <div class="text-5">
+        <p class="text-wrapper-5">
+          That I could be this excellence at this time
+        </p>
+        <p class="sudden-changed">sudden, changed, peaceful, &amp; woke</p>
+      </div>
+
+      <div class="text-6">
+        <div class="text-wrapper-6">To all my friends</div>
+        <div class="inside-text">
+          <p class="text-wrapper-6">who have been with me in weakness</p>
+          <p class="p">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when
+            water falls rush down my two sides
+          </p>
+        </div>
+      </div>
+      <div class="text-7">
+        <div class="text-wrapper-6">To all my friends</div>
+        <p class="who-have-felt-me-in">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who have
+          felt me in anguish
+        </p>
+      </div>
+      <div class="text-8">
+        <p class="text-wrapper-6">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; when this earthen
+          back breaks
+        </p>
+        <p class="p">between the crack of two blades</p>
+      </div>
+
+      <div class="text-2">
+        <div class="text-wrapper-2">To all my friends</div>
+        <p class="who-have-held-me-in">
+          &nbsp;&nbsp;&nbsp;&nbsp; who have held me in rage
+        </p>
+      </div>
+
+      <div class="text">
+        <p class="text-wrapper">
+          when fire tears through swallows behind tight grins
+        </p>
+      </div>
+      <div class="the-end-text">
+        <div class="text-11">
+          <div class="text-wrapper-9">I know you</div>
+        </div>
+        <div class="text-9"><div class="text-wrapper-9">I see you</div></div>
+        <div class="text-10"><div class="text-wrapper-9">I hear you</div></div>
+      </div>
+      <div class="text-wrapper-10">sweet dream</div>
+    </div>
+
+    <script>
+      const trigger = document.getElementById("finalFirstTrigger");
+      const secondGif = document.getElementById("finalSecondVideo");
+      const restingScene = document.querySelector(".resting");
+      const starInteractive = document.getElementById("star-interactive");
+
+      if (trigger && secondGif) {
+        trigger.addEventListener("click", () => {
+          trigger.style.display = "none";
+          secondGif.style.display = "block";
+          secondGif.src = "FINAL-ASSETS/final-second-1.gif?" + Date.now();
+
+          setTimeout(() => {
+            secondGif.style.display = "none";
+            trigger.style.display = "block";
+          }, 5000);
+        });
+      }
+
+      if (restingScene && starInteractive) {
+        starInteractive.addEventListener("mouseenter", () => {
+          restingScene.classList.add("star-hovered");
+        });
+
+        starInteractive.addEventListener("mouseleave", () => {
+          restingScene.classList.remove("star-hovered");
+        });
+      }
+    </script>
+    <!-- <script>
+      const trigger = document.getElementById("finalFirstTrigger");
+      const secondGif = document.getElementById("finalSecondVideo");
+
+      if (trigger && secondGif) {
+        let timer = null;
+
+        trigger.addEventListener("click", () => {
+          if (timer) clearTimeout(timer);
+
+          const freshSrc = "FINAL-ASSETS/final-second-1.gif" + Date.now();
+
+          const imgPreloader = new Image();
+          imgPreloader.src = freshSrc;
+
+          secondGif.src = freshSrc;
+          secondGif.classList.add("playing");
+
+          timer = setTimeout(() => {
+            secondGif.classList.remove("playing");
+          }, 5000);
+        });
+      } -->
+    </script>
+  </body>
+</html>
