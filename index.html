@@ -9,21 +9,45 @@
     <link rel="stylesheet" href="text.css" />
   </head>
   <body>
+    <audio id="bgMusic" autoplay loop>
+      <source
+        src="FINAL-ASSETS/tomomi_kato-letters-260001.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
     <!-- BACKGROUND IMAGES -->
     <div class="main">
-      <div class="frame-number-1">
-        <div class="first-background"></div>
-        <div class="final-first" id="finalFirstTrigger"></div>
-        <img
-          class="final-second-video"
-          id="finalSecondVideo"
-          src="FINAL-ASSETS/final-second-1.gif"
-          alt="Final second animation"
-        />
+      <div>
+        <div class="text-3">
+          <p class="that-i-could-be-this">
+            That <span class="color-pulse">I could be this human</span> at this
+            time
+          </p>
+          <p class="p">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            breathing, looking, seeing, smelling
+          </p>
+        </div>
+        <div class="frame-number-1">
+          <div class="first-background"></div>
+          <div class="final-first" id="finalFirstTrigger"></div>
+          <img
+            class="final-second-video"
+            id="finalSecondVideo"
+            src="FINAL-ASSETS/final-second-1.gif"
+            alt="Final second animation"
+          />
+        </div>
       </div>
 
       <div class="frame-number-2">
-        <div class="resting"><img id="star-interactive" src="FINAL-ASSETS/star-interactive.png" alt=""></div>
+        <div class="resting">
+          <img
+            id="star-interactive"
+            src="FINAL-ASSETS/star-interactive.png"
+            alt=""
+          />
+        </div>
       </div>
 
       <div class="frame-number-4">
@@ -62,7 +86,6 @@
           <div class="third-figure"></div>
           <div class="tear-dropping"></div>
           <div class="tear-dropping-2"></div>
-       
         </div>
       </div>
 
@@ -83,15 +106,16 @@
         <div class="text-wrapper-8">by May Yang (HAUNTIE)</div>
       </div>
 
-      <div class="text-3">
+      <!-- <div class="text-3">
         <p class="that-i-could-be-this">
-         That <span class="color-pulse">I could be this human</span> at this time
+          That <span class="color-pulse">I could be this human</span> at this
+          time
         </p>
         <p class="p">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           breathing, looking, seeing, smelling
         </p>
-      </div>
+      </div> -->
 
       <div class="text-4">
         <p class="text-wrapper-3">That I could be this moment at this time</p>
@@ -153,6 +177,18 @@
     </div>
 
     <script>
+      const music = document.getElementById("bgMusic");
+
+      music.volume = 0.7; //
+
+      document.addEventListener(
+        "click",
+        () => {
+          music.play();
+        },
+        { once: true },
+      );
+
       const trigger = document.getElementById("finalFirstTrigger");
       const secondGif = document.getElementById("finalSecondVideo");
       const restingScene = document.querySelector(".resting");
@@ -180,30 +216,6 @@
           restingScene.classList.remove("star-hovered");
         });
       }
-    </script>
-    <!-- <script>
-      const trigger = document.getElementById("finalFirstTrigger");
-      const secondGif = document.getElementById("finalSecondVideo");
-
-      if (trigger && secondGif) {
-        let timer = null;
-
-        trigger.addEventListener("click", () => {
-          if (timer) clearTimeout(timer);
-
-          const freshSrc = "FINAL-ASSETS/final-second-1.gif" + Date.now();
-
-          const imgPreloader = new Image();
-          imgPreloader.src = freshSrc;
-
-          secondGif.src = freshSrc;
-          secondGif.classList.add("playing");
-
-          timer = setTimeout(() => {
-            secondGif.classList.remove("playing");
-          }, 5000);
-        });
-      } -->
     </script>
   </body>
 </html>
