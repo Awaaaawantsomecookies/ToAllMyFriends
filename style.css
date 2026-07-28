@@ -15,6 +15,9 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: #fef9e6;
+  display: flex;
+  justify-content: center;
 }
 a {
   text-decoration: none;
@@ -23,35 +26,32 @@ a {
 /* BODY */
 .main {
   background-color: #fef9e6;
-  width: 100%;
-  min-width: 1440px;
+  width: min(100%, 3500px);
+  max-width: 3500px;
+  min-width: 0;
   min-height: 7406px;
   height: auto;
   position: relative;
-  overflow: visible;
+  overflow-x: hidden;
 }
 .main .peace-ending {
   position: absolute;
   top: 6370px;
   left: 0;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
   height: clamp(320px, 42vw, 740px);
   background-image: url("FINAL-ASSETS/another-peace.png");
   background-size: cover;
   background-position: 50% 50%;
-
-  max-width: 2340px;
-
-  /* aspect-ratio: 2.16; */
+  max-width: 3500px;
 }
 
 .main .wigling-wigling {
   position: absolute;
   top: 5745px;
   left: 0;
-  width: 100vw;
-  max-width: 2340px;
+  width: 100%;
+  max-width: 3500px;
   height: 667px;
   aspect-ratio: 2.16;
   background-image: url("FINAL-ASSETS/wigling-wigling-lines.png");
@@ -62,18 +62,15 @@ a {
 .main .frame-number-4 {
   position: absolute;
   left: 0;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
   height: clamp(620px, 60vw, 1100px);
   top: 4720px;
-
-  max-width: 2340px;
+  max-width: 3500px;
 }
 
 .main .background-orange {
-  /* top: 4720px; */
   width: 100%;
-  max-width: 2340px;
+  max-width: 3500px;
   height: 1051px;
   display: block;
   background-image: url(FINAL-ASSETS/background-4.png);
@@ -84,10 +81,9 @@ a {
 
 .main .anger-frame {
   position: absolute;
-  /* top: 4720px; */
-  left: -35px;
+  left: 0;
   width: 100%;
-  max-width: 2340px;
+  max-width: 3500px;
   height: 1063px;
   aspect-ratio: 1.44;
   background-image: url(FINAL-ASSETS/first-4.png);
@@ -146,7 +142,7 @@ a {
 .main .orange-line {
   position: absolute;
   top: 5650px;
-  left: -100px;
+  left: -150px;
   width: 3500px;
   height: 260px;
   background-color: #db7b0d;
@@ -179,6 +175,7 @@ a {
   left: -100px;
   width: 2000px;
   height: 1197px;
+  max-width: none;
   background-image: url("FINAL-ASSETS/resting-origin.png");
   background-size: 100% 100%;
   /* position: relative; */
@@ -565,8 +562,14 @@ a {
   }
 }
 
+@media (max-width: 1100px) {
+  .main .title {
+    width: min(72vw, 900px);
+  }
+}
+
 @media (min-width: 1600px) {
   .main {
-    padding: 0 40px;
+    padding: 0 20px;
   }
 }
