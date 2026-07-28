@@ -16,8 +16,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #fef9e6;
-  display: flex;
-  justify-content: center;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -32,6 +31,9 @@ a {
   min-height: 7406px;
   height: auto;
   position: relative;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
   overflow-x: hidden;
 }
 .main .peace-ending {
